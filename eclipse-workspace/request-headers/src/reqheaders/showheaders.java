@@ -1,6 +1,6 @@
 // Matt Rencher
-// Modify servlet to detect client browser
-// If it is IE, then display
+// JSP Servlet to detect client's browser
+// 9/26/2018
 
 package reqheaders;
 
@@ -8,16 +8,9 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
-
-import MyUtilities.ServletUtilities;
-
 import java.util.*;
 
-/** Shows all the request headers sent on the current request.
- *  <p>
- *  From <a href="http://courses.coreservlets.com/Course-Materials/">the
- *  coreservlets.com tutorials on servlets, JSP, Struts, JSF, Ajax, GWT, and Java</a>.
- */
+import MyUtilities.ServletUtilities;
 
 @WebServlet("/show-headers")
 public class showheaders extends HttpServlet {
@@ -37,7 +30,8 @@ public class showheaders extends HttpServlet {
                 "<BODY BGCOLOR=\"#FDF5E6\">\n" +
                 "<H1 ALIGN=\"CENTER\">" + title + "</H1>\n" +
                 "<TABLE BORDER=1 ALIGN=\"CENTER\">\n");
-
+    
+    // Flags found in browsers user-agent
     String firefox  = "firefox";
     String chrome  = "chrome";
     String ie  = "wow64";
@@ -68,7 +62,6 @@ public class showheaders extends HttpServlet {
 	            out.println("    <TD>Maybe you're using Eclipse or IDE");
 	     	}
     	}
-
     }
     out.println("</TABLE>\n</BODY></HTML>");
   }
