@@ -1,0 +1,10 @@
+127.0.0.1 - - [20/Sep/2018:15:07:50 -0400] "GET / HTTP/1.1" 200 1130
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:07:51 -0400] "GET /exercise-forms/three-params-post-filter.html HTTP/1.1" 200 510
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:07:56 -0400] "POST /exercise-forms/three-params-post-filter HTTP/1.1" 200 328
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:07:56 -0400] "GET /exercise-forms/asdf HTTP/1.1" 404 989
+127.0.0.1 - - [20/Sep/2018:15:11:02 -0400] "GET / HTTP/1.1" 200 1130
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:13:07 -0400] "POST /exercise-forms/three-params-post-filter HTTP/1.1" 200 368
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:13:08 -0400] "GET /exercise-forms/asdf HTTP/1.1" 404 989
+127.0.0.1 - - [20/Sep/2018:15:13:52 -0400] "GET / HTTP/1.1" 200 1130
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:14:00 -0400] "POST /exercise-forms/three-params-post-filter HTTP/1.1" 200 342
+0:0:0:0:0:0:0:1 - - [20/Sep/2018:15:14:00 -0400] "GET /exercise-forms/asdf HTTP/1.1" 404 989
