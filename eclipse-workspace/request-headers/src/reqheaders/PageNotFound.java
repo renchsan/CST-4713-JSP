@@ -16,19 +16,17 @@ public class PageNotFound extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 			out.println("This won't be seen if sendError() is called");
 			String lang = request.getParameter("lang");
 		    if (lang.equals("java"))
-		    		{
+		    	{
 	        	response.sendRedirect("https://docs.oracle.com/javase/tutorial/");
 		    }
-	                else {
-	                	response.sendError(404,"Page not found");
-
-		}
+	            else {
+	               	response.sendError(404,"Page not found");
+	        }
 	}
 }

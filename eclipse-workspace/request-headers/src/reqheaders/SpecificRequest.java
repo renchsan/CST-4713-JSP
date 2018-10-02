@@ -18,6 +18,7 @@ public class SpecificRequest extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		// check counter
 		if (num()) {
 			response.sendRedirect("https://www.nytimes.com/");
 
