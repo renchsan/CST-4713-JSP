@@ -1,5 +1,9 @@
+// Matt Rencher
+// CST 4713-JSP
+// Exercises: Cookies Exercise 1
+// Redirect users who visit page 2, without visiting page 1
+// Using cookies
 
-// Exercise 1
 package cookiesExercises;
 
 import java.io.*;
