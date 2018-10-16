@@ -114,6 +114,7 @@ public class infoReq extends HttpServlet {
 		
 		// Show Form or Display
 		if(!submit) {
+			// Form
 			out.println(docType +
 			"<HTML><HEAD><TITLE>Collecting Name and Email</TITLE></HEAD>"+
 			"<BODY BGCOLOR=\"#FDF5E6\">"+
@@ -129,6 +130,7 @@ public class infoReq extends HttpServlet {
 			"</FORM> " +
 			"</BODY></HTML>");
 		} else {
+			// Display Inputs
 		    out.println(docType +
             "<HTML>\n" +
             "<HEAD><TITLE>" + title + "</TITLE></HEAD>\n" +

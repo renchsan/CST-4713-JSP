@@ -23,7 +23,7 @@ public class TestServletLoopTable extends HttpServlet {
       ("<!DOCTYPE html>\n" +
        "<html>\n" +
        "<head><title>Table generated with Loop</title></head>\n" +
-       "<body bgcolor=\"#008080\">\n" +
+       "<body>\n" +
        "<h1></h1>\n");
 
      out.println("<table BORDER=1 CELLPADDING=5 CELLSPACING=1>");
