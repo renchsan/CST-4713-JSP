@@ -26,14 +26,18 @@ public class PageColorPicker extends HttpServlet {
        "<head><title>Select Your Page Colors</title></head>\n" +
        "<body>\n" +
        "<h1>Choose Your Foreground And Background Colors</h1>\n" +
-       "<FORM ACTION=\"page-color\" method=\"POST\">" +
+       "<FORM ACTION=\"http://localhost/cookies/page-color\" method=\"POST\">" +
 	  	 " <CENTER><label for=\"fgColor\">Foreground Color: </label> " +
-	  	 " <INPUT TYPE=\"color\" id=\"fgColor\"> name=\"fgColor\"><BR><BR> " +
+	  	 " <INPUT TYPE=\"color\" id=\"fgColor\" name=\"fgColor\"><BR><BR> " +
 	  	 " <label for=\"bgColor\">Background Color: </label> " +
-	  	 " <INPUT TYPE=\"color\" id=\"bgColor\"> name=\"bgColor\"><BR><BR> " +
+	  	 " <INPUT TYPE=\"color\" id=\"bgColor\" name=\"bgColor\"><BR><BR> " +
 	  	 " <INPUT TYPE=\"SUBMIT\"></CENTER> " +
 		"</FORM> " +
 		"</BODY></HTML>");
   }
-
+  public void doPost(HttpServletRequest request,
+	      HttpServletResponse response)
+	      throws ServletException, IOException {
+		  	doGet(request, response);
+	  	};
 }
