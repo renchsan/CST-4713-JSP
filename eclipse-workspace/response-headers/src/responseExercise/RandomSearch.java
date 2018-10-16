@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
-@WebServlet("/random-search-1")
+@WebServlet("/random-search")
 public class RandomSearch extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -18,12 +18,11 @@ public class RandomSearch extends HttpServlet {
 		
 		
 		if (Math.random() < 0.5) {
-			//set redirect manually
-			response.setStatus(302);
-			response.setHeader("Location", "www.google.com/");
+//			response.setStatus(300);
+			response.setHeader("sendRedirect", "www.google.com/");
 		} else {
-			response.setStatus(302);
-			response.setHeader("Location", "www.bing.com/");
+//			response.setStatus(300);
+			response.setHeader("sendRedirect", "www.bing.com/");
 		} 
 		
 		// Doesn't redirect to pages properly
