@@ -1,3 +1,10 @@
+// Matt Rencher
+// CST 4713-JSP
+// Exercises: Cookies Exercise 2
+// Show a form to submit fname, lname, email
+// Remember user's values from past submissions
+
+
 package cookiesExercises;
 
 import java.io.*;

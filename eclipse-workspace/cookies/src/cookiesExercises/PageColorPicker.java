@@ -1,4 +1,8 @@
-// use Request Headers to add color picker for extra credit
+// Matt Rencher
+// CST 4713-JSP
+// Exercises: Cookies Exercise 3
+// Servlet to show table with default or selected colors
+// uses cookies to remember user's selections
 
 package cookiesExercises;
 
