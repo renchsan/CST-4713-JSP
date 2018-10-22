@@ -8,40 +8,35 @@ Front end to ShowItems servlet.
 </HEAD>
 <BODY BGCOLOR="#FDF5E6">
 <CENTER>
-<H1>Order Form</H1>
+<H1>Product List</H1>
 <FORM ACTION="shopping-cart" METHOD="POST">
-  New Item to Order:  
-  
-  <TABLE BORDER=1 ALIGN="CENTER">
-  <TR BGCOLOR="#FFAD00">
-	  <TH>Item ID
-	  <TH>Item Name
-	  <TH>Add Item
-  </TR>
-  
-  <TR>
-  	<TD>123</TD>
-  	<TD>Orange</TD>
-  	<TD><INPUT TYPE="SUBMIT" NAME="newItem" VALUE="Orange"></TD>
-  </TR>
-  
-  <TR>
-  	<TD>124</TD>
-  	<TD>Apple</TD>
-  	<TD><INPUT TYPE="SUBMIT" NAME="newItem" VALUE="Apple"></TD>
-  </TR>
-  <TR>
-  	<TD>125</TD>
-  	<TD>Banana</TD>
-  	<TD><INPUT TYPE="SUBMIT" NAME="newItem" VALUE="Banana"></TD>
-  </TR>
-  <TR>
-  	<TD>126</TD>
-  	<TD>Grape</TD>
-  	<TD><INPUT TYPE="SUBMIT" NAME="newItem" VALUE="Grape"></TD>
-  </TR>
+<H3>Fruit Order Form</H3>
+  <TABLE BORDER=1 CELLPADDING=5 CELLSPACING=1>
+	  <TR BGCOLOR="#FFAD00">
+		  <TH>Item ID
+		  <TH>Item Name
+		  <TH>Add Item
+	  </TR>
+	  <TR>
+	  	<TD>123</TD>
+	  	<TD>Orange</TD>
+	  	<TD><INPUT TYPE="SUBMIT" NAME="item" VALUE="Orange"></TD>
+	  </TR>
+	  <TR>
+	  	<TD>124</TD>
+	  	<TD>Apple</TD>
+	  	<TD><INPUT TYPE="SUBMIT" NAME="item" VALUE="Apple"></TD>
+	  </TR>
+	  <TR>
+	  	<TD>125</TD>
+	  	<TD>Banana</TD>
+	  	<TD><INPUT TYPE="SUBMIT" NAME="item" VALUE="Banana"></TD>
+	  </TR>
+	  <TR>
+	  	<TD>126</TD>
+	  	<TD>Grape</TD>
+	  	<TD><INPUT TYPE="SUBMIT" NAME="item" VALUE="Grape"></TD>
+	  </TR>
   </TABLE>
-  
-  <!-- <INPUT TYPE="SUBMIT" VALUE="Order and Show All Purchases"> -->
 </FORM>
 </CENTER></BODY></HTML>

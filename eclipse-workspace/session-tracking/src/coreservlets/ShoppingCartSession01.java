@@ -15,38 +15,76 @@ public class ShoppingCartSession01 extends HttpServlet {
     HttpSession session = request.getSession();
     synchronized(session) {
       @SuppressWarnings("unchecked")
-      List<String> previousItems =
-        (List<String>)session.getAttribute("previousItems");
-      if (previousItems == null) {
-        previousItems = new ArrayList<String>();
+      
+      int orangeQty = 0, appleQty = 0, bananaQty = 0, grapeQty = 0;
+      
+      Map<Integer, Integer> previousCart = (HashMap<Integer, Integer>)session.getAttribute("previousCart");
+      if (previousCart == null) {
+    	  previousCart = new HashMap<Integer, Integer>();
+        previousCart.put(123, 0);
+        previousCart.put(124, 0);
+        previousCart.put(125, 0);
+        previousCart.put(126, 0);
+      } 
+      if (!previousCart.get(123).equals(0)) {
+    	  orangeQty = previousCart.get(123);
+    	  previousCart.put(123, orangeQty);
       }
-      String newItem = request.getParameter("newItem");
-      if ((newItem != null) &&
-          (!newItem.trim().equals(""))) {
-        previousItems.add(newItem);
+      if (!previousCart.get(124).equals(0)) {
+    	  appleQty = previousCart.get(124);
+    	  previousCart.put(124, appleQty);
       }
-      session.setAttribute("previousItems", previousItems);
+      if (!previousCart.get(125).equals(0)) {
+    	  bananaQty = previousCart.get(125);
+    	  previousCart.put(125, bananaQty);
+      }
+      if (!previousCart.get(126).equals(0)) {
+    	  grapeQty = previousCart.get(126);
+    	  previousCart.put(126, grapeQty);
+      }
+      
+      // Check which button was pushed, add to fruit quantity
+      String item = request.getParameter("item");
+      if ((item != null) && (!item.trim().equals(""))) {
+    	  if (item.equals("Orange")){
+    		  orangeQty++;
+    		  previousCart.put(123, orangeQty);
+    	  } else if (item.equals("Apple")){
+    		  appleQty++;
+    		  previousCart.put(124, appleQty);
+    	  }	else if (item.equals("Banana")){
+    		  bananaQty++;
+    		  previousCart.put(125, bananaQty);
+    	  } else if (item.equals("Grape")){
+    		  grapeQty++;
+    		  previousCart.put(126, grapeQty);
+    	  }
+      }
+      
+      session.setAttribute("previousCart", previousCart);
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-      String title = "Items Purchased";
+      String title = "Shopping Cart";
       String docType =
         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
         "Transitional//EN\">\n";
+      
       out.println(docType +
                   "<HTML>\n" +
                   "<HEAD><TITLE>" + title + "</TITLE></HEAD>\n" +
-                  "<BODY BGCOLOR=\"#FDF5E6\">\n" +
+                  "<BODY BGCOLOR=\"#FDF5E6\"><CENTER>\n" +
                   "<H1>" + title + "</H1>");
-      if (previousItems.size() == 0) {
-        out.println("<I>No items</I>");
-      } else {
-        out.println("<UL>");
-        for(String item: previousItems) {
-          out.println("  <LI>" + item);
-        }
-        out.println("</UL>");
-      }
-      out.println("</BODY></HTML>");
+      out.println("<TABLE BORDER=1 CELLPADDING=5 CELLSPACING=1>");
+      out.print("<tr><th>Item Number</th><th>Item Name</th><th>Item Quantity</th></tr>");
+	  out.print("<tr><td>123</td><td>Orange</td><td>" + orangeQty + "</td></tr>");
+	  out.print("<tr><td>124</td><td>Apple</td><td>" + appleQty + "</td></tr>");
+	  out.print("<tr><td>125</td><td>Banana</td><td>" + bananaQty + "</td></tr>");
+	  out.print("<tr><td>126</td><td>Grape</td><td>" + grapeQty + "</td></tr>");
+
+      out.println("</TABLE>");
+      out.println("<br><a href=\"#\" onclick=\"history.go(-1)\">Back To Product List</a>");
+      out.println("</CENTER></BODY></HTML>");
+
     }
   }
 }

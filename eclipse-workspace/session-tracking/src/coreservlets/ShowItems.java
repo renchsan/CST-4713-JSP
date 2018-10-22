@@ -25,8 +25,8 @@ public class ShowItems extends HttpServlet {
     HttpSession session = request.getSession();
     synchronized(session) {
       @SuppressWarnings("unchecked")
-      List<String> previousItems =
-        (List<String>)session.getAttribute("previousItems");
+      
+      List<String> previousItems = (List<String>)session.getAttribute("previousItems");
       if (previousItems == null) {
         previousItems = new ArrayList<String>();
       }
