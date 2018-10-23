@@ -4,7 +4,8 @@
 // 
 // 
 
-package coreservlets;
+
+package sessionEx;
 
 import java.io.*;
 import javax.servlet.*;
@@ -12,8 +13,8 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.util.*;
 
-@WebServlet("/shopping-cart")
-public class ShoppingCart extends HttpServlet {
+@WebServlet("/shopping-cart-session")
+public class ShoppingCartSession01 extends HttpServlet {
   @Override
   public void doPost (HttpServletRequest request,
                       HttpServletResponse response)

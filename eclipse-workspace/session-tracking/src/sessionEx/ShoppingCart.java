@@ -1,11 +1,8 @@
 // Matt Rencher
 // CST 4713-JSP
 // Shopping Cart using Session
-// 
-// 
 
-
-package coreservlets;
+package sessionEx;
 
 import java.io.*;
 import javax.servlet.*;
@@ -13,10 +10,10 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.util.*;
 
-@WebServlet("/shopping-cart-session")
-public class ShoppingCartSession01 extends HttpServlet {
+@WebServlet("/shopping-cart")
+public class ShoppingCart extends HttpServlet {
   @Override
-  public void doPost (HttpServletRequest request,
+  public void doGet (HttpServletRequest request,
                       HttpServletResponse response)
       throws ServletException, IOException {
     HttpSession session = request.getSession();
@@ -89,9 +86,15 @@ public class ShoppingCartSession01 extends HttpServlet {
 	  out.print("<tr><td>126</td><td>Grape</td><td>" + grapeQty + "</td></tr>");
       out.println("</TABLE>");
       // Back to order form link
-      out.println("<br><a href=\"#\" onclick=\"history.go(-1)\">Back To Product List</a>");
+      out.println("<br><a href=\"#\" onclick=\"history.go(-1)\"> << Back To Product List</a>");
       out.println("</CENTER></BODY></HTML>");
 
     }
   }
+  
+  public void doPost(HttpServletRequest request,
+	      HttpServletResponse response)
+	      throws ServletException, IOException {
+		  	doGet(request, response);
+	  	};
 }
