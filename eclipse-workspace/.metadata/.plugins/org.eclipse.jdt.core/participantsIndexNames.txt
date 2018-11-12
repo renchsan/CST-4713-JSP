@@ -1,5 +1,9 @@
 INDEX VERSION 1.131
-C:\Users\BASED\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\307618058.index
-\proj01\src
 E:\GitHub\matt\CST-4713-JSP\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\307618058.index
 \proj01\src
+C:\Users\BASED\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\307618058.index
+\proj01\src
+E:\GitHub\matt\CST-4713-JSP\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\83233568.index
+\jsp-scripting\src
+E:\GitHub\matt\CST-4713-JSP\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2792250068.index
+\jsp-intro\src
