@@ -8,16 +8,20 @@ Matt Rencher JSP-3
   <TITLE>Color Testing</TITLE>
 </HEAD>
 
-<% 
+<%! private String lastColor = ""; %>
+<%
 String bgParam = request.getParameter("bgColor");
 String bgColor = "";
 if ((bgParam == null) || (bgParam.trim().equals(""))) { 
-	bgColor = lastColor;
+	if (!lastColor.isEmpty()){
+		bgColor = lastColor;
+	}
 } else {
 	bgColor = bgParam;
+	lastColor = bgParam;
 }
 %>
-<%! lastColor = bgParam; %>
+
 <BODY BGCOLOR="<%= bgColor %>">
 
 <H2 ALIGN="CENTER">Testing a Background of "<%= bgColor %>".</H2>
