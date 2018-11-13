@@ -11,7 +11,7 @@ One of four random-number examples. This one uses declarations.
 </HEAD>
 <BODY>
 <%! 
-private int randomNum = coreservlets.RanUtilities.randomInt(10); 
+private int randomNum = coreservlets.RanUtilities.randomInt(10);
 %>
 <H1>Semi-Random Number:<BR><%= randomNum %></H1>
 

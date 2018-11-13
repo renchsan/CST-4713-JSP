@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- 
-Example of a JSP scriptlet.
+Matt Rencher JSP-1
 -->
-<%@page import="utils.ColorUtils"%>
+
 <HTML>
 <HEAD>
-  <TITLE>Color Testing</TITLE>
+  <TITLE>Color Testing 1</TITLE>
 </HEAD>
 <% 
 String bgColor = utils.ColorUtils.random();
