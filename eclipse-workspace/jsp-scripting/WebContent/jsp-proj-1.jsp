@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- 
 Matt Rencher JSP-1
+Make a JSP page that randomly selects a 
+background color for each request.
 -->
 
 <HTML>

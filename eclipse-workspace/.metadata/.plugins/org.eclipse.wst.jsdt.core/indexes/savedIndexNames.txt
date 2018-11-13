@@ -1,6 +1,5 @@
 INDEX VERSION 1.4+E:\GitHub\matt\CST-4713-JSP\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 313763054.index
-83233568.index
 4052977093.index
 1322992697.index
 1505000889.index

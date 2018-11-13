@@ -1,6 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!--
 Matt Rencher JSP-3
+Make a JSP page that lets the user supply a request parameter indicating the back-
+ground color. If no parameter is supplied, 
+the most recently used background color 
+(from a previous request by any user) should be used.
 -->
 
 <HTML>
