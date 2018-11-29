@@ -15,7 +15,9 @@ public class MyClassesTag extends SimpleTagSupport {
   public void doTag() throws JspException, IOException {
     JspWriter out = getJspContext().getOut();
     String[] classes = MyClasses.getClasses();
-    out.print(classes);
-    
+    for(int i = 0; i < classes.length; i++) {
+    	out.println(classes[i]);
+    	out.println("<BR>");
+    }    
   }
 }

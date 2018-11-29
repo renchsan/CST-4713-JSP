@@ -67,6 +67,6 @@
   	<description>Prints all registered classes</description>
   	<name>myClasses</name>
   	<tag-class>coreservlets.tags.MyClassesTag</tag-class>
-  	<body-content>tagdependent</body-content>
+  	<body-content>empty</body-content>
   </tag>
 </taglib>
