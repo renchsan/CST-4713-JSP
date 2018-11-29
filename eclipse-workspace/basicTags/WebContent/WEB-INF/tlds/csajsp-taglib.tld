@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+  http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  <tlib-version>1.0</tlib-version>
+  <short-name>csajsp-taglib</short-name>
+  
+  <tag>
+    <description>Outputs 50-digit primes</description>
+    <name>simplePrime</name>
+    <tag-class>coreservlets.tags.SimplePrimeTag</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  
+  <tag>
+    <description>Outputs an N-digit prime</description>
+    <name>prime</name>
+    <tag-class>coreservlets.tags.PrimeTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <description>N (prime number length)</description>
+      <name>length</name>
+      <required>false</required>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <description>Formats enclosed heading</description>
+    <name>heading</name>
+    <tag-class>coreservlets.tags.HeadingTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>align</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>bgColor</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>border</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>fgColor</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>font</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>size</name>
+      <required>true</required>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <description>Conditionally outputs enclosed body</description>
+    <name>debug</name>
+    <tag-class>coreservlets.tags.DebugTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+  	<description>Prints all registered classes</description>
+  	<name>myClasses</name>
+  	<tag-class>coreservlets.tags.MyClassesTag</tag-class>
+  	<body-content>tagdependent</body-content>
+  </tag>
+</taglib>
